@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CryptoJS from "crypto-js";
@@ -17,8 +16,9 @@ const Esewa = ({ amount = 100 }) => {
     product_service_charge: "0",
     product_delivery_charge: "0",
     product_code: "EPAYTEST",
-    success_url: `https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app//paymentsuccess?amount=${totalAmount}`,
-    failure_url: "https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app//paymentfailure",
+    success_url: `https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app/paymentsuccess?amount=${totalAmount}`,
+    failure_url:
+      "https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app/paymentfailure",
     signed_field_names: "total_amount,transaction_uuid,product_code",
     signature: "",
   });
@@ -32,7 +32,7 @@ const Esewa = ({ amount = 100 }) => {
     const signature = CryptoJS.enc.Base64.stringify(hash);
 
     setFormData((prev) => ({ ...prev, signature }));
-  }, []); 
+  }, []);
 
   return (
     <form
