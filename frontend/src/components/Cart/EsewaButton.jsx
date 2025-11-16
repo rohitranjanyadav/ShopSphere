@@ -16,9 +16,9 @@ const Esewa = ({ amount = 100 }) => {
     product_service_charge: "0",
     product_delivery_charge: "0",
     product_code: "EPAYTEST",
-    success_url: `https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app/paymentsuccess?amount=${totalAmount}`,
+    success_url: `shop-sphere-4uyi.vercel.app/paymentsuccess?amount=${totalAmount}`,
     failure_url:
-      "https://shop-sphere-4uyi-e9vq828fm-rohits-projects-aa699176.vercel.app/paymentfailure",
+      "shop-sphere-4uyi.vercel.app/paymentfailure",
     signed_field_names: "total_amount,transaction_uuid,product_code",
     signature: "",
   });
